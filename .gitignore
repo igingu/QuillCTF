@@ -12,3 +12,11 @@ docs/
 
 # Dotenv file
 .env
+
+challenges/collatz-puzzle
+challenges/pelusa
+challenges/true-xor
+challenges/weth-10
+
+src/weth-10/*
+test/weth-10/*
