@@ -23,7 +23,6 @@ contract D31eg4t3Test is Test {
         vm.startPrank(hacker, hacker);
 
         delegateHack.hackd31eg4t3(delegate);
-        delegate.hacked();
 
         vm.stopPrank();
 

