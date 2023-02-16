@@ -1,7 +1,6 @@
 pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
-import "forge-std/console.sol";
 
 import {D31eg4t3, D31eg4t3Hack} from "../../src/d31eg4t3/d31eg4t3.sol";
 
